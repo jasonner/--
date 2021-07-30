@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSN  BP PRO问卷</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 引入 jQuery Mobile 样式 -->
+    <link rel="stylesheet" href="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <!-- 引入 jQuery 库 -->
+    <script src="https://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- 引入 jQuery Mobile 库 -->
+    <script src="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <!-- 引入微信组件库 -->
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+    <script src="./js/Forward.js"></script>
+    <style>
+        .ui-input-text{
+            border: none;
+        }
+    </style>
+</head>
+<body>
+<div id="page1" data-role="page">
+    <!-- <div data-role="header">
+        <h1>CSN  BP PRO问卷</h1>
+    </div> -->
+    <div data-role="content">
+        <form id="form1" >
+            <fieldset data-role="controlgroup">
+                <legend>第1题：您的医院级别是？</legend>
+                <label for="q11">三级甲等</label>
+                <label for="q12">三级乙等</label>
+                <label for="q13">二级</label>
+                <label for="q14">私立医院</label>
+                <label for="q15">其他医疗机构</label>
+                <input type="radio" name="o1" id="q11" value="q11"/>
+                <input type="radio" name="o1" id="q12" value="q12"/>
+                <input type="radio" name="o1" id="q13" value="q13"/>
+                <input type="radio" name="o1" id="q14" value="q14"/>
+                <input type="radio" name="o1" id="q15" value="q15"/>
+            </fieldset>
+            <fieldset data-role="controlgroup" style="margin-top: 1.5rem;">
+                <legend>第2题：您所在的科室有多少张透析床位？</legend>
+                <label for="q21"> <&nbsp;20 </label>
+                <label for="q22"> 20-40 </label>
+                <label for="q23"> >&nbsp;40</label>
+                <input type="radio" name="o2" id="q21" value="q21"/>
+                <input type="radio" name="o2" id="q22" value="q22"/>
+                <input type="radio" name="o2" id="q23" value="q23"/>
+            </fieldset>
+           
+            <fieldset data-role="controlgroup" style="margin-top: 1.5rem;"> 
+                <legend>第3题：   您的职务是？</legend>
+                <label for="q31">医生</label>
+                <label for="q32">护士</label>
+                <label for="q33">技师</label>
+                <input type="radio" name="o3" id="q31" value="q31"/>
+                <input type="radio" name="o3" id="q32" value="q32"/>
+                <input type="radio" name="o3" id="q33" value="q33"/>
+            </fieldset>
+
+            <fieldset data-role="controlgroup" style="margin-top: 1.5rem;"> 
+                <legend>第4题：  您科室开展CRRT治疗吗？</legend>
+                <label for="q41" class="q4Yes">有</label>
+                <label for="q42" class="q4No">无</label>
+                <input type="radio" class="q4Yes" name="o4" id="q41" value="q41"/>
+                <input type="radio" class="q4No" name="o4" id="q42" value="q42"/>
+            </fieldset>
+
+            <fieldset data-role="controlgroup" style="margin-top: 1.5rem;" id="q5"> 
+                <legend>第5题：   您所在的科室有几台CRRT设备？</legend>
+                <label for="q51"> <&nbsp;3 </label>
+                <label for="q52">3-5</label>
+                <label for="q53">>&nbsp;5</label>
+                <input type="radio" name="o5" id="q51" value="q51"/>
+                <input type="radio" name="o5" id="q52" value="q52"/>
+                <input type="radio" name="o5" id="q53" value="q53"/>
+            </fieldset>
+
+             <fieldset data-role="controlgroup" style="position: relative;margin-top: 1.5rem;">
+                <legend>第6题： 以下CRRT功能特点，您最关注的三个是？   （多选且选择3项）</legend>
+                <label for="q61" class="q61">一体化枸橼酸抗凝，实现智能泵联动</label>
+                <label for="q62" class="q62">内置枸橼酸方案，轻松检索，方便调整</label>
+                <label for="q63" class="q63">智能操作系统，图文操作指引，辅助检测错误原因，提供解决方案参考</label>
+                <label for="q64" class="q64">关爱模式：在特殊情况下（患者护理、移动等），暂时降低流速，放宽压力范围，减少报警和治疗中断</label>
+                <label for="q65" class="q65">后续干预提示：提示用户接下来的120分钟内的干预操作，便于提前安排管理，减少治疗中断</label>
+                <label for="q66" class="q66">4个12kg高精度称，减少换袋频率及治疗中断</label>
+                <label for="q67" class="q67">充分加热：两个一体化液体加温器，在冬季、高流量等情况下也能高效加热</label>
+                <label for="q68" class="q68">泵管自动嵌入及弹出功能，无需手动装卸泵管</label>
+                <label for="q69" class="q69">一体化预制管路，便于安装</label>
+                <label for="q60" class="q60">其他，请说明</label>
+                <input class="q6" type="checkbox" name="o6" id="q61" value="q61"/>
+                <input class="q6" type="checkbox" name="o6" id="q62" value="q62"/>
+                <input class="q6" type="checkbox" name="o6" id="q63" value="q63"/>
+                <input class="q6" type="checkbox" name="o6" id="q64" value="q64"/>
+                <input class="q6" type="checkbox" name="o6" id="q65" value="q65"/>
+                <input class="q6" type="checkbox" name="o6" id="q66" value="q66"/>
+                <input class="q6" type="checkbox" name="o6" id="q67" value="q67"/>
+                <input class="q6" type="checkbox" name="o6" id="q68" value="q68"/>
+                <input class="q6" type="checkbox" name="o6" id="q69" value="q69"/>
+                <input class="q6" type="checkbox" name="o6" id="q60"  value="o6msg" />
+                <input type="text" id="q17" placeholder=""  name="o6msg" style="position: absolute;bottom: 1.6%;min-height: 2.5em; width: 54%;z-index: 1000;left: 42%;border: 1px solid #cfcfcf;"/>
+            </fieldset>
+            <!-- <fieldset data-role="controlgroup">
+                <input type="text" id="q17" placeholder="" name="o17"/>
+            </fieldset> -->
+            <a href="#page2" id="submit" style="color:#fff;background: #FF8040; font-size: 20px;" data-role="button">提&nbsp;&nbsp;交</a>
+        </form>
+    </div>
+    <div data-role="footer">
+        <h4>谢谢答题！</h4>
+    </div>
+</div>
+<script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function () {
+     var hm = document.createElement("script");
+     hm.src = "https://hm.baidu.com/hm.js?6e210dc22b978250d813412739acac85";
+     var s = document.getElementsByTagName("script")[0];
+     s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+</body>
+</html>
+<script type="text/javascript">
+    $(document).ready(function () {
+        const url = new URL(window.location);//获取到页面的url地址
+        if(url.protocol!='https:'){
+            window.location.href = "https://wxcore.forhoo.com.cn/21/wj/20210714wj/";
+        };
+        window.onpageshow = function(event) {
+            if (event.persisted) {
+                window.location.reload(true); 
+            };
+        };
+
+        //清除IOS手机alert域名提示
+        window.alert = function(name) {
+            var iframe = document.createElement("IFRAME");
+            iframe.style.display = "none";
+            iframe.setAttribute("src", 'data:text/plain,');
+            document.documentElement.appendChild(iframe);
+            window.frames[0].window.alert(name);
+            iframe.parentNode.removeChild(iframe);
+        };
+        window.confirm = function(message) {
+            var iframe = document.createElement("IFRAME");
+            iframe.style.display = "none";
+            iframe.setAttribute("src", 'data:text/plain,');
+            document.documentElement.appendChild(iframe);
+            var alertFrame = window.frames[0];
+            var result = alertFrame.window.confirm(message);
+            iframe.parentNode.removeChild(iframe);
+            return result;
+        };
+
+        //判断用户是否授权
+        initWXlogin();
+        function initWXlogin(){
+            $.ajax({
+                type: "GET",
+                url: "/lhwxlogin/GetUserWXInfo?callkey=E2C0D747-E443-4B51-BDF2-FC59BDE934A9",
+                async: false,
+                success : function(data) {
+                    console.log(data);
+                    if(!data.user){
+                       window.location.href = "/lhwxlogin/WXlogin?callkey=E2C0D747-E443-4B51-BDF2-FC59BDE934A9"
+                    }else{
+
+                    }
+                },
+                error : function() {
+                    alert("系统异常，请稍后重试！");
+                }
+            });
+        };
+        
+        //是否答过题
+        function isAnswer(){
+            $.ajax({
+                type: "GET",
+                url: "/home2021/CSN0715_GetUserQaInfo",
+                async: false,
+                success : function(data) {
+                    console.log(data);
+                    sessionStorage.setItem('state',data.state);
+                },
+                error : function() {
+                    alert("系统异常，请稍后重试！");
+                }
+            });
+        };
+        
+        //第4题选择否处理
+        $('.q4Yes').click(function(){
+            $('#q5').show();
+           sessionStorage.setItem('q4showFlag','1');
+        });
+
+        $('.q4No').click(function(){
+            $('#q5').hide();
+            sessionStorage.setItem('q4showFlag','0');
+        });
+
+        //多选题处理
+        var num = 0;
+        $('.q6').click(function(e){
+            console.log(num);
+            if($(this).attr('data-cacheval') == 'false'){
+                num++;
+            }else if($(this).attr('data-cacheval') == 'true'){
+                num--;
+            };
+            if(num>3){
+                alert('多选题,请选择3个选项提交!');
+                $(this).parent().find("input:checkbox").prop('checked', function  (i, value) {
+                         return !value;
+                });
+                num = 3;
+            };
+        });
+
+        //数据处理
+        var initARR= {
+            q11:'三级甲等',
+            q12:'三级乙等',
+            q13:'二级',
+            q14:'私立医院',
+            q15:'其他医疗机构',
+            q21:'<20',
+            q22:'20-40',
+            q23:'>40',
+            q31:'医生',
+            q32:'护士',
+            q33:'技师',
+            q41:'有',
+            q42:'无',
+            q51:'<3',
+            q52:'3-5',
+            q53:'>5',
+            q61:'一体化枸橼酸抗凝，实现智能泵联动',
+            q62:'内置枸橼酸方案，轻松检索，方便调整',
+            q63:'智能操作系统，图文操作指引，辅助检测错误原因，提供解决方案参考',
+            q64:'关爱模式：在特殊情况下（患者护理、移动等），暂时降低流速，放宽压力范围，减少报警和治疗中断',
+            q65:'后续干预提示：提示用户接下来的120分钟内的干预操作，便于提前安排管理，减少治疗中断',
+            q66:'4个12kg高精度称，减少换袋频率及治疗中断',
+            q67:'充分加热：两个一体化液体加温器，在冬季、高流量等情况下也能高效加热',
+            q68:'泵管自动嵌入及弹出功能，无需手动装卸泵管',
+            q69:'一体化预制管路，便于安装',
+            q60:'',
+        };
+
+        //提交数据
+        $("#submit").click(function(){
+            isAnswer();
+            let isAnswerReturn = sessionStorage.getItem('state');
+            //console.log(isAnswerReturn);
+            if(!isAnswerReturn || isAnswerReturn =='false'){
+                console.log('答过题');
+                alert('您已参与过调研!');
+            }else{
+                console.log('未答题');
+                submitContent();
+            };
+        });
+        var dataStr = {};
+        var dataStrArr = [];
+        var o6str = '';
+        function submitContent(){
+            var string2Result =$('#form1').serialize().split('&');
+            //console.log(string2Result);
+            var arr = [];
+            for(var i=0;i<string2Result.length;i++){
+                let arrObj = string2Result[i].split('=');
+                let obj = {
+                    key:arrObj[0],
+                    val:arrObj[1]
+                };
+                arr.push(obj);
+            }
+            console.log(arr);
+            var q4showFlag = sessionStorage.getItem('q4showFlag');
+            console.log(q4showFlag);
+            if(q4showFlag == '1'){//有CRRT治疗
+                console.log('有治疗')
+                if(arr[0].key !='o1' || arr[1].key !='o2' || arr[2].key !='o3' || arr[3].key !='o4'  || arr[4].key !='o5'){
+                    alert('您还有题目没有选择!');
+                    return
+                }else{
+                    interceptJudgment(arr);
+                    //其他请说明处理
+                    if($('.q60').hasClass('ui-checkbox-on')){
+                        if($('#q17').val()==""){
+                            alert('请输入说明内容!');
+                            return;
+                        }else{
+                            var promise = {
+                                o1:dataStrArr[0].o1,
+                                o2:dataStrArr[1].o2,
+                                o3:dataStrArr[2].o3,
+                                o4:dataStrArr[3].o4,
+                                o5:dataStrArr[4].o5,
+                                o6:o6str.substring(0,o6str.length-1),
+                                o6msg:$('#q17').val()
+                            };
+                        }
+                    }else{
+                        var promise = {
+                            o1:dataStrArr[0].o1,
+                            o2:dataStrArr[1].o2,
+                            o3:dataStrArr[2].o3,
+                            o4:dataStrArr[3].o4,
+                            o5:dataStrArr[4].o5,
+                            o6:o6str.substring(0,o6str.length-1)
+                        };
+                    }
+                    sedData(promise);
+                }
+            }else{//没有CRRT治疗
+                console.log(arr);
+                console.log('没有CRRT治疗');
+                if(arr[0].key !='o1' || arr[1].key !='o2' || arr[2].key !='o3' || arr[3].key !='o4'){
+                    alert('您还有题目没有选择!');
+                    return
+                }else{
+                    interceptJudgment(arr);
+                    //其他请说明处理
+                    if($('.q60').hasClass('ui-checkbox-on')){
+                        if($('#q17').val()==""){
+                            alert('请输入说明内容!');
+                            return;
+                        }else{
+                            var promise = {
+                                o1:dataStrArr[0].o1,
+                                o2:dataStrArr[1].o2,
+                                o3:dataStrArr[2].o3,
+                                o4:dataStrArr[3].o4,
+                                o6:o6str.substring(0,o6str.length-1),
+                                o6msg:$('#q17').val()
+                            };
+                        }
+                    }else{
+                        var promise = {
+                            o1:dataStrArr[0].o1,
+                            o2:dataStrArr[1].o2,
+                            o3:dataStrArr[2].o3,
+                            o4:dataStrArr[3].o4,
+                            o6:o6str.substring(0,o6str.length-1)
+                        };
+                    }
+                    sedData(promise);
+                }
+            }
+        };
+
+        //拦截判断
+        function interceptJudgment(arr){
+            console.log(num);
+            if(num<3){
+                alert('多选题，请选择3个选项提交!');
+                return
+            };
+          
+            //赋值
+            for(var i=0;i<arr.length;i++){
+                switch (arr[i].val){
+                    case 'q11':
+                        dataStr={
+                            o1:initARR.q11
+                        }
+                        dataStrArr.push(dataStr);
+                        break;
+                    case 'q12':
+                        dataStr={
+                            o1:initARR.q12
+                        }
+                        dataStrArr.push(dataStr);
+                        break;
+                    case 'q13':
+                        dataStr={
+                            o1:initARR.q13
+                        }
+                        dataStrArr.push(dataStr);
+                        break;
+                    case 'q14':
+                        dataStr={
+                            o1:initARR.q14
+                        }
+                        dataStrArr.push(dataStr);
+                        break;
+                    case 'q15':
+                        dataStr={
+                            o1:initARR.q15
+                        }
+                        dataStrArr.push(dataStr);
+                        break;
+                    case 'q21':
+                        dataStr={
+                            o2:initARR.q21
+                        }
+                        dataStrArr.push(dataStr);
+                        break;
+                    case 'q22':
+                        dataStr={
+                            o2:initARR.q22
+                        }
+                        dataStrArr.push(dataStr);
+                        break;
+                    case 'q23':
+                        dataStr={
+                            o2:initARR.q23
+                        }
+                        dataStrArr.push(dataStr);
+                        break;
+                    case 'q31':
+                        dataStr={
+                            o3:initARR.q31
+                        }
+                        dataStrArr.push(dataStr);
+                        break;
+                    case 'q32':
+                        dataStr={
+                            o3:initARR.q32
+                        }
+                        dataStrArr.push(dataStr);
+                        break;
+                    case 'q33':
+                        dataStr={
+                            o3:initARR.q33
+                        }
+                        dataStrArr.push(dataStr);
+                        break;
+                    case 'q41':
+                        dataStr={
+                            o4:initARR.q41
+                        }
+                        dataStrArr.push(dataStr);
+                        break;
+                    case 'q42':
+                        dataStr={
+                            o4:initARR.q42
+                        }
+                        dataStrArr.push(dataStr);
+                        break;
+                    case 'q51':
+                        dataStr={
+                            o5:initARR.q51
+                        }
+                        dataStrArr.push(dataStr);
+                        break;
+                    case 'q52':
+                        dataStr={
+                            o5:initARR.q52
+                        }
+                        dataStrArr.push(dataStr);
+                        break;
+                    case 'q53':
+                        dataStr={
+                            o5:initARR.q53
+                        }
+                        dataStrArr.push(dataStr);
+                        break;
+                    case 'q61':
+                        dataStr={
+                            o6:initARR.q61
+                        }
+                        dataStrArr.push(dataStr);
+                        o6str+=initARR.q61+'|'
+                        break;
+                    case 'q62':
+                        dataStr={
+                            o6:initARR.q62
+                        }
+                        dataStrArr.push(dataStr);
+                        o6str+=initARR.q62+'|'
+                        break;
+                    case 'q63':
+                        dataStr={
+                            o6:initARR.q63
+                        }
+                        dataStrArr.push(dataStr);
+                        o6str+=initARR.q63+'|'
+                        break;
+                    case 'q64':
+                        dataStr={
+                            o6:initARR.q64
+                        }
+                        dataStrArr.push(dataStr);
+                        o6str+=initARR.q64+'|'
+                        break;
+                    case 'q65':
+                        dataStr={
+                            o6:initARR.q65
+                        }
+                        dataStrArr.push(dataStr);
+                        o6str+=initARR.q65+'|'
+                        break;
+                    case 'q66':
+                        dataStr={
+                            o6:initARR.q66
+                        }
+                        dataStrArr.push(dataStr);
+                        o6str+=initARR.q66+'|'
+                        break;
+                    case 'q67':
+                        dataStr={
+                            o6:initARR.q67
+                        }
+                        dataStrArr.push(dataStr);
+                        o6str+=initARR.q67+'|'
+                        break;
+                    case 'q68':
+                        dataStr={
+                            o6:initARR.q68
+                        }
+                        dataStrArr.push(dataStr);
+                        o6str+=initARR.q68+'|'
+                        break; 
+                    case 'q69':
+                        dataStr={
+                            o6:initARR.q69
+                        }
+                        dataStrArr.push(dataStr);
+                        o6str+=initARR.q69+'|'
+                        break;
+                };
+            };
+
+        };
+
+        //提交数据
+        function sedData(promise){
+            console.log(promise);
+            $.ajax({
+                type: "POST",
+                url: "/home2021/CSN0715_AddQ",
+                data:promise,
+                async: false,
+                dataType: "json",
+                success : function(data) {
+                    console.log(data);
+                    if(data.success){
+                        alert('提交成功!');
+                    }else{
+                        alert('提交失败!');
+                    }
+                },
+                error : function() {
+                    alert("系统异常，请稍后重试!");
+                }
+            });
+        };
+    });
+</script>
